@@ -45,3 +45,50 @@ if age < 20
 else age >= 20
     print "飲酒可能" # それ以外だったときの処理
 end
+place = rand(1..12) # 何位かを$placeに1~12をランダムで代入
+print "#{place}位"
+if place < 6
+    # 条件が成り立ったときの処理
+    puts "入賞"
+else
+    # それ以外だったときの処理
+    puts "入賞圏外"
+end
+age = rand(15..25) # 何才かを$ageに15~25をランダムで代入
+print "#{age}才"
+if age >= 20
+  # 条件が成り立ったときの処理
+  puts "成人です"
+else
+  # それ以外だったときの処理
+  puts "未成年です"
+end
+# if文による条件分岐
+omikuji = rand(1..100)
+if omikuji >= 30
+  puts "omikujiの中身は#{ omikuji }なので大吉"
+else
+  puts "omikujiの中身は#{ omikuji }なので大凶"
+end
+dice = rand(1..6)
+puts "サイコロは#{dice}"
+if dice > 3
+    puts "スライムの攻撃をかわした"
+else
+    puts "スライムから10のダメージを受けた"
+end
+seireki = rand(1926..1988)	# 西暦年
+print "西暦#{seireki}年は"
+
+# 昭和年を計算する
+showa = seireki - 1925
+# 昭和年を出力する
+puts "昭和#{showa}年です。"
+# 順位に合わせてメッセージを表示する
+number = rand(1..10)
+puts "あなたの順位は#{number}位です"
+
+##　ここにifを追加する
+if number > 1 && number < 6
+    puts "あと少し！"
+end
