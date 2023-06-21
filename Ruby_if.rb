@@ -92,3 +92,52 @@ puts "あなたの順位は#{number}位です"
 if number > 1 && number < 6
     puts "あと少し！"
 end
+
+# 距離に合わせてメッセージを表示する
+distance = rand(1..30)
+puts "あなたの距離は#{distance}メートルです"
+
+##　ここにifを追加する
+if distance <= 9 || distance >= 21
+    puts "セーフ！"
+end
+
+# 順位に合わせてメッセージを表示する
+number = rand(1..10)
+puts "あなたの順位は#{number}位です"
+
+flag = number <=3
+##　ここにifを追加する
+if flag == true
+    puts "入賞おめでとう！"
+end
+# 文字列を数値に変換しよう
+number = "0.08"
+p number.to_f
+
+number = 0.08
+p number.to_i
+p number.to_s
+
+# 肉の量り売り
+price = 128
+weight = 300
+amount = ((price * weight) / 100).to_i
+puts "100グラム#{price}円の肉、#{weight}グラムは、#{amount}円です。"
+
+# 税込価格を計算する
+price = 3500
+puts "定価 : #{price}円"
+
+discount_price = (price * 0.85).to_i
+puts "割引価格は、#{discount_price}円です。"
+
+amount = (discount_price * 1.08).to_i
+puts "税込価格は、#{amount}円です。"
+
+person = 5
+puts "人数が、#{person}人の場合、"
+
+amount_per_person = amount / person
+remainder = amount % person
+puts "一人当たり#{amount_per_person}円、余りは#{remainder}円です。"
