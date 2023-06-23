@@ -107,3 +107,40 @@ puts gets
 # 標準入力
 line = gets.to_i
 puts line * 100
+
+# 標準入力とループ処理
+count = gets.to_i
+puts "データ個数 #{count}"
+
+for i in 1..count
+    line = gets
+    puts "hello #{line}"
+end
+
+# 標準入力とループ処理
+count = gets.to_i
+# puts "データ個数 #{count}"
+
+for i in 1..count
+    line = gets.chomp
+    puts "#{line}は、スライムを攻撃した！"
+end
+
+# 標準入力とループ処理
+count = gets.to_i
+for i in 1..count
+    puts "スライムがあらわれた"
+end
+
+# 標準入力とループ処理
+count1 = gets.to_i
+count2 = gets.to_i
+for i in count1..count2
+    puts i
+end
+
+# 標準入力とループ処理
+count = gets.to_i
+for i in 1..count
+    puts gets
+end
