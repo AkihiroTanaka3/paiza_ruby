@@ -144,3 +144,32 @@ count = gets.to_i
 for i in 1..count
     puts gets
 end
+
+# 西暦年と平成年の対応表を作る
+# 1989年から2019年までをループで出力
+# ループ内で、各西暦年を平成年に変換
+for seireki in 1989..2019
+    print "西暦#{seireki}年は、"
+    heisei = seireki - 1988
+    puts "平成#{heisei}年です"
+end
+# 西暦年と昭和年の対応表
+# 1926年から1988年までをループで出力
+# ループ内で、各西暦年を昭和年に変換
+for seireki in 1926..1988
+    print "西暦#{seireki}年は、"
+    syowa = seireki - 1925
+    puts "昭和#{syowa}年です。"
+end
+# 特定期間の西暦年と昭和年の対応表を作る
+# 1行目：開始年
+# 2行目：期間
+# 昭和年 = 西暦年 - 1925
+# 出力：西暦XXXX年は、昭和YY年です。
+seireki = gets.to_i
+time = seireki - 1 + gets.to_i
+for i in seireki..time
+    print "西暦#{i}年は、"
+    syowa = i - 1925
+    puts "昭和#{syowa}年です。"
+end
