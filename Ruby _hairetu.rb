@@ -115,3 +115,25 @@ for num in numbers
 sum += num
 end
 puts sum
+
+# ループで配列を操作する2
+team = ["勇者", "戦士", "魔法使い", "盗賊"]
+team.each do |i|
+	puts i
+end
+
+#配列の中身をループで表示する
+enemy = ["スライム", "モンスター", "ゾンビ", "ドラゴン", "魔王"]
+# ここに、要素をループで表示するコードを記述する
+enemy.each do |i|
+    puts "#{i}が現れた"
+end
+
+# 要素を合計を計算する
+numbers = [12, 34, 56, 78, 90]
+sum = 0
+numbers.each do |num|
+	# ここに、合計を計算するコードを記述する
+sum = sum + num
+end
+puts sum
