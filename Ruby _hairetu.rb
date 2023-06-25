@@ -28,3 +28,40 @@ player_3 = "戦士"
 # player_1 ~ 3を、配列に代入して、pメソッドで出力してください。
 team = [player_1, player_2, player_3]
 p team
+
+# 配列の要素を取り出す
+
+num = 0
+team = ["勇者", "魔法使い"]
+p team
+puts team[num + 1]
+
+# 配列から特定要素を取り出す
+
+team = ["勇者", "戦士", "侍", "忍者", "魔法使い"]
+# teamの1番左の要素をputsメソッドで出力する
+puts team[0]
+
+
+team = ["戦士", "戦士", "侍", "忍者", "魔法使い"]
+# teamの3番目の要素をputsメソッドで出力する
+puts team[2]
+
+# 配列の要素を操作する
+
+team = ["勇者", "魔法使い"]
+p team
+puts team[1]
+puts team.length
+team.push("戦士")
+p team
+puts team.length
+team[2] = "ドラゴン"
+p team
+puts team.length
+team[5] = "盗賊"
+p team
+puts team.length
+team.delete_at(2)
+p team
+puts team.length
