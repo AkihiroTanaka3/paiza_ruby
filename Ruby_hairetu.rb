@@ -162,3 +162,26 @@ p line.length
 # https://paiza.jp/cgc/users/ready
 url_str = gets.chomp.split("/")
 p url_str
+
+# 複数行データを配列に格納する
+array = []
+while line = gets
+    line.chomp!
+    array.push(line)
+    # p line
+end
+p array
+
+# 読み込んだ複数行を出力する
+while line = gets
+	line.chomp!
+	puts "#{line}が現れた"
+end
+
+# 標準入力から読み込んだ複数行を配列に格納しよう
+array = []
+while line = gets
+    line.chomp!
+    array.push(line)
+end
+p array
