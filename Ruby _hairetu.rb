@@ -137,3 +137,13 @@ numbers.each do |num|
 sum = sum + num
 end
 puts sum
+
+# 取り込んだデータを配列に格納する
+# 入力　スライム,モンスター,ドラゴン,魔王
+line = gets.chomp.split(",")
+p line
+puts line.length
+
+line.each do |enemy|
+    puts "#{enemy}が現れた！"
+end
