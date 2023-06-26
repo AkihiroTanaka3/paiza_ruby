@@ -147,3 +147,18 @@ puts line.length
 line.each do |enemy|
     puts "#{enemy}が現れた！"
 end
+
+#文字列をカンマで分割する
+team_str = "勇者,戦士,忍者,魔法使い"
+line = team_str.chomp.split(",")
+p line
+
+#英文の単語数を数える
+str = "One cold rainy day when my father was a little boy he met an old alley cat on his street"
+line = str.split( )
+p line.length
+
+# 標準入力から読み込んだURLを分割する
+# https://paiza.jp/cgc/users/ready
+url_str = gets.chomp.split("/")
+p url_str
