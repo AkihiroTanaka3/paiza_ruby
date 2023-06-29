@@ -204,3 +204,26 @@ input_line.times do #アイテムの数だけ繰り返し処理を行います�
     puts "<img src='#{items_img[item_name]}'>" #与えられたアイテム名がitems_imgに存在しない場合は表示されません。
   end
 end
+
+# ハッシュにシンボルを使う
+enemies1 = {"ザコ" => "スライム", "中ボス" => "ドラゴン", "ラスボス" => "魔王"}
+p enemies1
+p enemies1["ザコ"]
+
+enemies2 = {:zako => "スライム", :boss => "ドラゴン", :king => "魔王"}
+p enemies2
+p enemies2[:boss]
+
+enemies2 = {:zako => "スライム", :boss => "ドラゴン", :king => "魔王"}
+p enemies2
+p enemies2[:boss]
+
+enemies3 = {zako: "スライム", boss: "ドラゴン", king: "魔王"}
+p enemies3
+p enemies3[:king]
+
+# ループでハッシュの値を出力しよう
+skills = {job: "戦士", power: 100, magic: 200, gold: 380, luck: 1000}
+skills.each do |key, item|
+  puts "#{key} = #{item}"
+end
