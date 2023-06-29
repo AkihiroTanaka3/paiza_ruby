@@ -148,3 +148,59 @@ p math.sort.to_h
 math = {"あだち" => 40, "いいだ" => 12, "えんどう" => 99}
 # この下で、ハッシュを値でソートして出力しよう
 p math.sort_by {|k, v| v}
+
+# RPGのアイテム一覧を再現２
+
+# 画像用ハッシュ
+items_img = {
+    "剣" => "http://paiza.jp/learning/images/sword.png",
+    "盾" => "http://paiza.jp/learning/images/shield.png",
+    "回復薬" => "http://paiza.jp/learning/images/potion.png",
+    "クリスタル" => "http://paiza.jp/learning/images/crystal.png"
+}
+
+# アイテムの並び順配列
+items_order = ["クリスタル", "回復薬", "盾", "剣", "回復薬", "回復薬"]
+# p items_img
+# p items_order
+
+#アイテム名を取り出す
+items_order.each do |item_name|
+    # 画像ファイルを取り出す
+    puts "<img src = '#{items_img[item_name]}'>"
+    puts "#{item_name}<br>"
+end
+
+# 画像用ハッシュ
+items_img = {
+    "剣" => "http://paiza.jp/learning/images/sword.png",
+    "盾" => "http://paiza.jp/learning/images/shield.png",
+    "回復薬" => "http://paiza.jp/learning/images/potion.png",
+    "クリスタル" => "http://paiza.jp/learning/images/crystal.png"
+}
+
+# アイテムの並び順配列
+items_order = ["剣", "盾", "回復薬", "クリスタル"]
+# ここから下を記述しよう
+items_order.each do |item_name|
+    puts "<img src = '#{items_img[item_name]}'>""<br>"
+end
+
+# 画像用ハッシュ
+items_img = {
+    "剣" => "http://paiza.jp/learning/images/sword.png",
+    "盾" => "http://paiza.jp/learning/images/shield.png",
+    "回復薬" => "http://paiza.jp/learning/images/potion.png",
+    "クリスタル" => "http://paiza.jp/learning/images/crystal.png"
+}
+
+# ここから下を記述しよう
+input_line = gets.to_i #標準入力からアイテム数を整数として取得しています。
+
+# アイテム名ごとに画像を表示
+input_line.times do #アイテムの数だけ繰り返し処理を行います。timesメソッドは、指定された回数だけブロック内の処理を繰り返します。
+  item_name = gets.chomp #アイテム名を1行ずつ取得しています。chompメソッドは、改行文字を取り除いた文字列を返します。
+  if items_img.include?(item_name) #指定されたキーがハッシュに存在する場合にtrueを返し、存在しない場合にfalseを返します。
+    puts "<img src='#{items_img[item_name]}'>" #与えられたアイテム名がitems_imgに存在しない場合は表示されません。
+  end
+end
