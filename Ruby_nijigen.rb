@@ -96,3 +96,38 @@ basket = [["木の棒", "こん棒", "エクスカリバー"], ["おにぎり", 
 # ここに、要素を削除するコードを記述する
 basket[2].delete_at(2)
 p basket
+
+# ループで配列を処理する
+team = ["勇者", "戦士", "魔法使い"]
+p team
+p team[0]
+team.each_with_index do |person, i|
+    puts "#{i + 1}番目の#{person}が、スライムと戦った"
+end
+
+numbers = [3, 1, 4, 1, 5]
+results = []
+numbers.each do |item|
+    results.push(item * 10)
+end
+
+p results
+results2 = numbers.map do |item|
+    item * 100
+end
+p results2
+
+#配列の中身をループで表示する
+enemies = ["スライム", "モンスター", "ゾンビ", "ドラゴン", "魔王"]
+# ここに、要素をループで表示するコードを記述する
+enemies.each_with_index do |enemy, i|
+    puts "#{i + 1}番目の#{enemy}が現れた！"
+end
+
+# 各要素を3倍にして新しい配列を作成する
+numbers = [12, 34, 56, 78, 90]
+# ここに、各要素を3倍にして新しい配列を作成するコードを記述する
+numbers2 = numbers.each.map do |i|
+    i * 3
+end
+p numbers2
