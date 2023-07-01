@@ -131,3 +131,26 @@ numbers2 = numbers.each.map do |i|
     i * 3
 end
 p numbers2
+
+# 2次元配列をmapで作成する
+numbers = Array.new(10, 1)
+p numbers
+p numbers.length
+
+numbers2 = Array.new(4, Array.new(3, 1))
+numbers2[0][1] = 2
+p numbers2
+p numbers2.length
+
+numbers3 = Array.new(4).map{Array.new(3, 1)}
+numbers3[0][1] = 3
+p numbers3
+p numbers3.length
+
+# Array.newで配列を作成してみよう
+text = Array.new(5, "paiza")
+p text
+
+# 2次元配列を作成してみよう
+number = Array.new(5).map{Array.new(4, 7)}
+p number
