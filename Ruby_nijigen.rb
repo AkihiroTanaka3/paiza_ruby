@@ -267,3 +267,28 @@ letters.each do |dot|
     end
     puts ""
 end
+
+# 2次元配列で地図を表示する
+landmap = Array.new(10).map{Array.new(20,"森")}
+landmap[0][0] = "城"
+landmap[0][19] = "町"
+landmap[9][19] = "町"
+landmap.each_with_index do |line, i|
+    print "#{i}:"
+    line.each do |area|
+        print area
+    end
+    puts ""
+end
+
+# 複数行テキストに行番号を追加する
+text = ["吾輩は猫である",
+        "名前はまだ無い",
+        "どこで生まれたか",
+        "とんと見当がつかぬ"]
+
+#ここに、行番号を表示するコードを記述する
+text.each_with_index do |line, i|
+    print "#{i + 1}:"
+	puts line
+end
