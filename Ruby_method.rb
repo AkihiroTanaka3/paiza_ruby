@@ -171,3 +171,20 @@ enemies.each {|enemy|
     puts "#{player}は、#{enemy}と戦った。"
 }
 puts "#{player}は、すべての敵を倒した。"
+
+# Here your code !
+# 引数のデフォルト値
+def introduce(name = "村人", msg) #デフォルト値
+    puts "私は#{name}です。"
+    puts "#{msg[:target]}、#{msg[:greeting]}。"
+    # p msg
+end
+introduce("勇者", target: "世界の皆さん", greeting: "こんにちは")
+# introduce()
+
+# 引数のデフォルト値
+def say_hello(target = "paiza")
+    puts "hello #{target}"
+end
+# この下にメソッド呼び出しを記述する
+say_hello
