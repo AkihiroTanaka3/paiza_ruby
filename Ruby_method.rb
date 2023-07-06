@@ -148,3 +148,26 @@ def say_hello(msg)
 end
 name = "paiza"
 say_hello(name)
+
+# ブロックを理解する
+team = ["勇者", "戦士", "魔法使い"]
+p team
+person = "忍者"
+enemy = "スライム"
+
+team.each do |person|
+    enemy = "ドラゴン"
+    puts "#{person}は、#{enemy}と戦った"
+end
+# do ~ end の中がブロック。
+# do ~ end は { } で表記することもできる。
+p person
+p enemy
+
+# RPGの戦闘シーン
+enemies = ["スライム", "モンスター", "ドラゴン"]
+player = "勇者"
+enemies.each {|enemy|
+    puts "#{player}は、#{enemy}と戦った。"
+}
+puts "#{player}は、すべての敵を倒した。"
