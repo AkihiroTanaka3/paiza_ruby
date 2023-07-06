@@ -129,3 +129,22 @@ team.each do |person, power|
     enemy_hp = enemy_hp - power
     output_ememy_hp(enemy_hp)
 end
+
+# メソッドの記法を理解する
+def say_hello(msg)
+    puts ("hello #{msg}")
+end
+# Rubyでは(引数)を省略して書くことができる
+say_hello "ruby"
+
+number = "123"
+p number
+p number.to_i
+say_hello(number)
+
+# 間違い探し
+def say_hello(msg)
+    puts("hello #{msg}")
+end
+name = "paiza"
+say_hello(name)
