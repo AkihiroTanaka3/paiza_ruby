@@ -188,3 +188,36 @@ def say_hello(target = "paiza")
 end
 # この下にメソッド呼び出しを記述する
 say_hello
+
+# キーワード引数
+
+def say_hello(greeting = "hello", torget = "world")
+    puts "#{greeting} #{torget}"
+end
+
+say_hello()
+say_hello("こんにちは", "皆さん")
+say_hello("good morning!")
+def say_hello2(greeting: "hello", torget: "world")
+    puts "#{greeting} #{torget}"
+end
+say_hello2()
+say_hello2(greeting: "こんにちは", torget: "皆さん")
+say_hello2(torget: "ネコ先生", greeting: "おはようございます")
+say_hello2(torget: "ネコ先生")
+say_hello2(greeting: "おはようございます")
+
+# キーワード引数
+
+def introduce(name: "私は", role: "村人です")
+    puts "#{name}、#{role}。"
+end
+# この下にメソッド呼び出しを記述する
+introduce
+
+# キーワード引数
+def introduce(name: "私は", role: "村人です")
+    puts "#{name}、#{role}。"
+end
+# この下にメソッド呼び出しを記述する
+introduce(name: "俺は", role: "戦士だぜ")
