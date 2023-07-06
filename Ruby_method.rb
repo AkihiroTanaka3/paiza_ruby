@@ -95,3 +95,37 @@ def say_hello()
 end
 
 say_hello()
+
+# RPGの攻撃シーン
+def attack(enemy)
+    puts "勇者は、#{enemy}を攻撃した"
+    hit = rand(1..10)
+    if hit < 6
+        puts "#{enemy}に、#{hit}のダメージを与えた！"
+    else
+        puts "クリティカルヒット！ #{enemy}に、100のダメージを与えた！"
+    end
+end
+enemies = ["スライム", "モンスター", "ドラゴン"]
+enemies.each do |enemy|
+    # puts "勇者は、#{enemy}を攻撃した"
+    attack(enemy)
+end
+
+# RPGの攻撃シーン
+def attack(person)
+    puts "#{person}はスライムを攻撃した"
+end
+
+def output_ememy_hp(enemy_hp)
+    puts "敵のHPは残り#{enemy_hp}です"
+end
+
+enemy_hp = gets.to_i
+team = {"勇者" => 200, "戦士" => 150, "魔法使い" => 100}
+team.each do |person, power|
+    attack(person)
+    # 以下に、敵の体力を減少させるコードを書く
+    enemy_hp = enemy_hp - power
+    output_ememy_hp(enemy_hp)
+end
