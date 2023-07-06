@@ -72,3 +72,26 @@ for i in 1..9
     end
     puts
 end
+
+# スコープを理解する
+$msg = "paiza" #グローバル変数、あまり使わない
+a = 10 #ローカル変数
+b = 20
+def sum(x, y)
+    a = 3
+    puts "#{$msg} #{a}"
+    return x + y
+end
+
+num = sum(a, b)
+puts num
+puts "#{$msg} #{a}"
+
+# 間違い探し
+$msg = "paiza"
+
+def say_hello()
+    puts "hello #{$msg}"
+end
+
+say_hello()
