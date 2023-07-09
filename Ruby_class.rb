@@ -231,3 +231,18 @@ p team.length.to_s
 team = ["勇者", "戦士", "魔法使い", "忍者", "盗賊"]
 # この下に、配列のクラス名を表示する処理を記述する
 p team.class
+
+# あらかじめ用意されているメソッド
+puts "hello world"
+
+line = gets.chomp.split(",")
+p line
+
+line.each do |player|
+    puts "#{player}が荒野を歩いていた。"
+end
+
+# 標準入力の文字列を配列にする
+# スライム,モンスター,ドラゴン,魔王
+line = gets.chomp.split(",")
+p line
