@@ -111,3 +111,93 @@ class Greeting
 end
 ruby = Greeting.new("paiza")
 ruby.say_hello()
+
+# RPGの敵クラスを作る
+class Enemy
+    attr_accessor :name
+    def initialize(name)
+        @name = name
+    end
+    
+    def attack()
+        puts "#{@name}は勇者を攻撃した。"
+    end
+end
+enemies = []
+enemies.push(Enemy.new("スライム"))
+enemies.push(Enemy.new("モンスター"))
+enemies.push(Enemy.new("ドラゴン"))
+
+enemies.each do |enemy|
+    enemy.attack()
+end
+
+# RPGの攻撃シーン
+class Player
+    def initialize(name)
+        @name = name
+    end
+
+    def attack(enemy)
+        puts  "#{@name}は#{enemy}を攻撃した"
+    end
+end
+team = []
+team.push(Player.new("勇者"))
+team.push(Player.new("戦士"))
+team.push(Player.new("魔法使い"))
+
+team.each do |person|
+    person.attack("スライム")
+end
+
+# クラスで、引数と戻り値のあるメソッドを作る
+class Item
+    @@tax = 1.08
+    
+    def initialize(price, quantity)
+        @price = price
+        @quantity = quantity
+    end
+    
+    def total()
+        (@price * @quantity * @@tax).round
+    end
+end
+apple = Item.new(120, 15)
+total = apple.total()
+puts "合憲金額は#{total}円です。"
+
+orange = Item.new(85, 32)
+puts "合計金額は#{orange.total}円です。"
+
+# 学生メソッドを呼び出す
+
+class Gakusei
+    def initialize(kokugo, sansu)
+        @kokugo = kokugo
+        @sansu = sansu
+    end
+
+    def sum()
+        @kokugo + @sansu
+    end
+end
+# この下で、インスタンスを実体化する
+yamada = Gakusei.new(70, 43)
+puts "合計は#{yamada.sum()}点です"
+
+# 学生メソッドを作る
+class Gakusei
+    def initialize(kokugo, sansu)
+        @kokugo = kokugo
+        @sansu = sansu
+    end
+
+    # この下に、合計得点を戻り値として返すsumメソッドを記述する
+    def sum()
+        @kokugo + @sansu
+    end
+end
+yamada = Gakusei.new(70, 43)
+puts "合計は#{yamada.sum()}点です"
