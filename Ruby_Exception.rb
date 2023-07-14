@@ -151,3 +151,41 @@ rescue NameError
 ensure
    puts "Hello Ruby"
 end
+
+# 例外は伝わる
+# メソッドの中で処理中に例外が発生した場合、呼び出し元へその例外が伝わる
+def test_exception(number)
+    puts 2
+    begin
+        puts 3
+        answer = 100 / number
+        return answer
+        puts 4
+    rescue ZeroDivisionError => e
+        puts 5
+        raise e
+    end
+    puts 6
+end
+
+    puts 1
+
+begin
+    answer = test_exception(0)
+    puts 7
+rescue ZeroDivisionError => e
+    puts 8
+    p e
+end
+
+# 呼び出し元へ例外を伝えよう
+def calc()
+    number = 100 / 0
+  end
+  
+  begin
+    puts calc()
+  rescue ZeroDivisionError => e
+    puts "0で割り算できません"
+  end
+  
